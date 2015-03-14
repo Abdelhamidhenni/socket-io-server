@@ -1,4 +1,4 @@
-# socket-server.
+# socket-io-server.
 Provides a simple abstraction for initializing- and connecting to a socket.io server.
 
 This module creates a singleton Object that exposes methods for listening to
@@ -6,14 +6,14 @@ and emitting socket events using an existing http Server Object.
 
 ## Installing.
 ```bash
-npm install socket-server
+npm install socket-io-server
 ```
 
 ## Usage.
 ```javascript
 var express = require('express'),
 	http = require('http'),
-	socket = require('socket-server'),
+	socket = require('socket-io-server'),
 	app = express(),
 	server = http.Server(app);
 

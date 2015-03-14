@@ -1,5 +1,5 @@
 {
-  "name": "socket-server",
+  "name": "socket-io-server",
   "description": "Provides a simple abstraction for initializing- and connecting to a socket.io server.",
   "version": "0.0.1",
   "author": "Daniel Illouz",
@@ -10,10 +10,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/danillouz/socket-server.git"
+    "url": "https://github.com/danillouz/socket-io-server.git"
   },
   "bugs": {
-    "url": "http://github.com/danillouz/socket-server/issues"
+    "url": "http://github.com/danillouz/socket-io-server/issues"
   },
   "licence": "MIT",
   "main": "index.js",
