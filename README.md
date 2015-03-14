@@ -6,36 +6,36 @@ and emitting socket events using an existing http Server Object.
 
 ## Installing.
 ```bash
-    npm install socket-server
+npm install socket-server
 ```
 
 ## Usage.
 ```javascript
-    var express = require('express'),
-		http = require('http'),
-		socket = require('socket-server'),
-		app = express(),
-		server = http.Server(app);
+var express = require('express'),
+	http = require('http'),
+	socket = require('socket-server'),
+	app = express(),
+	server = http.Server(app);
 
-	socket.init(server);
+socket.init(server);
 
-	// Listen for incoming events from a client.
-	socket.on('incoming', function (data) {
-		// Data! :)
-	});
+// Listen for incoming events from a client.
+socket.on('incoming', function (data) {
+	// Data! :)
+});
 
-	// Emit an event to a specific client.
-	socket.emit.client('emit-client', {
-		data: []
-	});
+// Emit an event to a specific client.
+socket.emit.client('emit-client', {
+	data: []
+});
 
-	// Emit an event to all connected clients.
-	socket.emit.clients('emit-clients', {
-		data: []
-	});
+// Emit an event to all connected clients.
+socket.emit.clients('emit-clients', {
+	data: []
+});
 
-	// Close the socket server connection.
-	socket.close();
+// Close the socket server connection.
+socket.close();
 ```
 
 ## Testing.
