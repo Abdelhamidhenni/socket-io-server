@@ -4,7 +4,12 @@ Provides a simple abstraction for initializing- and connecting to a socket.io se
 This module creates a singleton Object that exposes methods for listening to
 and emitting socket events using an existing http Server Object.
 
-Usage:
+## Installing.
+```bash
+    npm install socket-server
+```
+
+## Usage.
 ```javascript
     var express = require('express'),
 		http = require('http'),
