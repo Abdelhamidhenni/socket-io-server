@@ -4,6 +4,8 @@ Provides a simple abstraction for initializing- and connecting to a socket.io se
 This module creates a singleton Object that exposes methods for listening to
 and emitting socket events using an existing http Server Object.
 
+[![wercker status](https://app.wercker.com/status/1f1a93309f327ba6c3cd0e482bd462a5/m "wercker status")](https://app.wercker.com/project/bykey/1f1a93309f327ba6c3cd0e482bd462a5)
+
 ## Installing.
 ```bash
 npm install socket-io-server
