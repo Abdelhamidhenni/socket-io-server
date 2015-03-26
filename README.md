@@ -39,7 +39,10 @@ socket.emit.clients('emit-clients', {
 	data: []
 });
 
-// Access the socket.io socket object.
+// Access the socketServer object (socket.io constructor).
+socket.socketServer;
+
+// Access the socket object (socket.io socket).
 socket.socket;
 
 // Close the socket server connection.
