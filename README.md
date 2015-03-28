@@ -4,6 +4,14 @@ Provides a simple abstraction for initializing- and connecting to a socket.io se
 This module creates a singleton Object that exposes methods for listening to
 and emitting socket events using an existing http Server Object.
 
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]] [travis-url]
+
+[npm-image]: https://img.shields.io/badge/npm-v0.0.4-blue.svg
+[npm-url]: https://www.npmjs.com/package/socket-io-server
+[travis-image]: https://travis-ci.org/danillouz/socket-io-server.svg?branch=master
+[travis-url]: https://travis-ci.org/danillouz/socket-io-server
+
 ## Installing.
 ```bash
 npm install socket-io-server
