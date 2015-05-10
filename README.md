@@ -20,11 +20,11 @@ npm install socket-io-server
 ## Usage.
 ```javascript
 // Dependencies.
-var express = require('express'),
-	http = require('http'),
-	socket = require('socket-io-server'),
-	app = express(),
-	server = http.Server(app);
+var express = require('express');
+var	http = require('http');
+var	socket = require('socket-io-server');
+var	app = express();
+var	server = http.Server(app);
 
 // Initialize socket server.
 socket.init(server);
@@ -33,25 +33,34 @@ socket.init(server);
 server.listen(8080);
 
 // Listen for incoming events from a client.
-socket.on('incoming', function (data) {
+// Note that a web socket client id is required, this id is emitted by the
+// socket server when a client connects.
+socket.on('ws-client-id', 'incoming', function (data) {
 	// Data! :)
 });
 
+// Emit an event with data to all connected clients except for the
+// client that started the event.
+// Note that a web socket client id is required, this id is emitted by the
+// socket server when a client connects.
+socket.broadcast('ws-client-id', 'emit-client', {
+	data: []
+});
+
 // Emit an event with data to a specific client.
-socket.emit.client('emit-client', {
+// Note that a web socket client id is required, this id is emitted by the
+// socket server when a client connects.
+socket.emit('ws-client-id', 'emit-client', {
 	data: []
 });
 
 // Emit an event with data to all connected clients.
-socket.emit.clients('emit-clients', {
+socket.emitAll('emit-clients', {
 	data: []
 });
 
 // Access the socketServer object (socket.io constructor).
 socket.socketServer;
-
-// Access the socket object (socket.io socket).
-socket.socket;
 
 // Close the socket server connection.
 socket.close();
@@ -66,11 +75,11 @@ listen for socket events.
 
 ```javascript
 // 'lib/index.js'
-var express = require('express'),
-	http = require('http'),
-	socket = require('socket-io-server'),
-	app = express(),
-	server = http.Server(app);
+var express = require('express');
+var	http = require('http');
+var	socket = require('socket-io-server');
+var	app = express();
+var	server = http.Server(app);
 
 socket.init(server);
 server.listen(8080);
@@ -78,14 +87,14 @@ server.listen(8080);
 // 'lib/sub-module.js'
 var socket = require('socket-io-server');
 
-socket.emit.client('emit-client', {
+socket.broadcast('ws-client-id', 'emit-client', {
 	data: []
 });
 
 // 'lib/sub-module-2.js'
 var socket = require('socket-io-server');
 
-socket.on('incoming', {
+socket.on('ws-client-id', 'incoming', {
 	data: []
 });
 ```
