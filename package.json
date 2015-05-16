@@ -1,7 +1,7 @@
 {
   "name": "socket-io-server",
   "description": "Provides a simple abstraction for initializing- and connecting to a socket.io server.",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Daniel Illouz",
   "keywords": [
     "socket",
