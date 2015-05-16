@@ -5,12 +5,14 @@ This module creates a singleton Object that exposes methods for listening to
 and emitting socket events using an existing http Server Object.
 
 [![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]] [travis-url]
+[![Build Status][travis-image]][travis-url]
+![Code Coverage][coverage-image]
 
 [npm-image]: https://img.shields.io/badge/npm-v1.0.1-blue.svg
 [npm-url]: https://www.npmjs.com/package/socket-io-server
 [travis-image]: https://travis-ci.org/danillouz/socket-io-server.svg?branch=master
 [travis-url]: https://travis-ci.org/danillouz/socket-io-server
+[coverage-image]: https://img.shields.io/badge/coverage-100%25-brightgreen.svg
 
 
 # Installing.
@@ -105,15 +107,15 @@ socket.on('ws-client-id', 'incoming', {
 # Interface.
 The module exposes the following methods and properties:
 
-## socket.socketServer `property`
+## socket.socketServer
 socket.io server instance.
 
-## socket.init(server) `method`
+## socket.init(server)
 Uses an http server instance to instantiate and connect to a socket.io server.
 
 *The `init` method calls the `connect` method internally.*
 
-## socket.connect(socketServer) `method`
+## socket.connect(socketServer)
 Exposes the socket server via the `socketServer` property and listens for clients
 connecting and disconnecting with the socket server.
 
@@ -144,31 +146,31 @@ This is realized by calling the `setSocket` method internally. In turn a
 client web socket id is invalidated whenever a client disconnects by calling the
 `removeSocket` method.
 
-## socket.setSocket(id) `method`
+## socket.setSocket(id)
 Stores a socket reference using the web socket id of a connected client.
 
-## socket.getSocket(id) `method`
+## socket.getSocket(id)
 Retrieves a socket reference using the web socket id of a connected client.
 
-## socket.removeSocket(id) `method`
+## socket.removeSocket(id)
 Deletes a socket reference using the web socket id of a connected client.
 
-## socket.on(id, event, callback) `method`
+## socket.on(id, event, callback)
 Registers event listeners for a connected client using it's web socket id.
 
-## socket.broadcast(id, event, data) `method`
+## socket.broadcast(id, event, data)
 Emits an event with data to all connected clients except for the client that
 started the event. This client is identified by using the web socket id of the
 connected client in question.
 
-## socket.emit(id, event, data) `method`
+## socket.emit(id, event, data)
 Emits an event with data to a specific client identified by the web socket id of
 the client in question.
 
-## socket.emitAll(event, data) `method`
+## socket.emitAll(event, data)
 Emits an event with data to all connected clients.
 
-## socket.close() `method`
+## socket.close()
 Closes the socket server connection.
 
 
@@ -184,7 +186,7 @@ after running the tests suite.
 
 Reports can be found in:
 ```
-/coverage/lcov-report/
+coverage/lcov-report/
 ```
 
 
