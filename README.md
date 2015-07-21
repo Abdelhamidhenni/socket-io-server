@@ -8,7 +8,7 @@ and emitting socket events using an existing http Server Object.
 [![Build Status][travis-image]][travis-url]
 [![Code Status][coverage-image]][coverage-url]
 
-[npm-image]: https://img.shields.io/badge/npm-v1.0.4-blue.svg
+[npm-image]: https://img.shields.io/badge/npm-v1.0.5-blue.svg
 [npm-url]: https://www.npmjs.com/package/socket-io-server
 [travis-image]: https://travis-ci.org/danillouz/socket-io-server.svg?branch=master
 [travis-url]: https://travis-ci.org/danillouz/socket-io-server

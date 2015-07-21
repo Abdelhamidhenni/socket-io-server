@@ -1,9 +1,9 @@
 var http = require('http');
 var Client = require('socket.io-client');
-var socket = require('../index');
+var socket = require('../lib/index');
 var expect = require('chai').expect;
 
-var CONFIG = require('../config/tests-config');
+var CONFIG = require('../lib/config/tests-config');
 var TEST_SOCKET_ID = '8882BqIoTSYqmf8bAAAA';
 var CLIENT = null;
 var WS_CLIENT_ID = null;
