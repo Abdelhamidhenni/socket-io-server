@@ -6,13 +6,14 @@ and emitting socket events using an existing http Server Object.
 
 [![NPM Version][npm-image]][npm-url]
 [![Build Status][travis-image]][travis-url]
-![Code Coverage][coverage-image]
+[![Code Status][coverage-image]][coverage-url]
 
-[npm-image]: https://img.shields.io/badge/npm-v1.0.3-blue.svg
+[npm-image]: https://img.shields.io/badge/npm-v1.0.4-blue.svg
 [npm-url]: https://www.npmjs.com/package/socket-io-server
 [travis-image]: https://travis-ci.org/danillouz/socket-io-server.svg?branch=master
 [travis-url]: https://travis-ci.org/danillouz/socket-io-server
-[coverage-image]: https://img.shields.io/badge/coverage-100%25-brightgreen.svg
+[coverage-image]: https://coveralls.io/repos/danillouz/socket-io-server/badge.svg?branch=master&service=github
+[coverage-url]: https://coveralls.io/github/danillouz/socket-io-server?branch=master
 
 
 # Installing.
@@ -181,13 +182,9 @@ npm test
 
 
 # Code coverage.
-Generated code coverage reports are based on written tests and are generated
-after running the tests suite.
+`npm run cover`
 
-Reports can be found in:
-```
-coverage/lcov-report/
-```
+[istanbul](https://github.com/gotwarlost/istanbul) and [coveralls](https://github.com/nickmerwin/node-coveralls) are used to generate a code coverage report.
 
 
 # Linting.
